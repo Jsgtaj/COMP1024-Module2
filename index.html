@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AwesomeFest 2020</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Rock+Salt&display=swap" rel="stylesheet" />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>AwesomeFest</h1>
+        <h2>Coming to Barrie, Ontario</h2>
+        <h3>Summer 2020</h3>
+      </div>
+    </header>
+    <div class="wrapper">
+      <main>
+        <section>
+          <p>
+            A 2 day festival experience featuring all your favourite bands right here in your own backyard.
+          </p>
+          <section class="images">
+            <div>
+              <img src="images/awesomefest.jpg" alt="awesomefest concert crowd" />
+            </div>
+            <div>
+              <img src="images/awesomefest-2.jpg" alt="that's him, it's mister dj." />
+            </div>
+          </section>
+        </section>
+        <section>
+          <h3>Tickets Available:</h3>
+          <table>
+            <thead>
+              <tr>
+                <!--these are column headers-->
+                <th scope="col">Ticket Type</th>
+                <th scope="col">Description</th>
+                <th scope="col">Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ultra Awesome Ticket</td>
+                <td>2 Day Camping Pass in VIP, exclusive section, VIP backstage access, Awesomefest Swag</td>
+                <td>$600.00</td>
+              </tr>
+              <tr>
+                <td>Super Awesome Ticket</td>
+                <td>1 Day Camping pass, Awesomefest Swag</td>
+                <td>$400.00</td>
+              </tr>
+              <tr>
+                <td>Awesome Ticket</td>
+                <td>One day access to main and side stage. Awesomefest beanie.</td>
+                <td>$200.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <form action="/submit.php" method="POST">
+            <!--Using fieldsetB and fieldsetS classes to wrap fieldsets
+               because flex doesn't work on regular fieldsets (bug)-->
+            <div class="fieldsetB">
+              <fieldset>
+                <!--Legends are hidden unless they have class="vis"-->
+                <legend class="vis">Personal Info</legend>
+                <div class="fieldsetS">
+                  <fieldset>
+                    <legend>First Name</legend>
+                    <label for="fName">First Name:</label>
+                    <input id="fName" name="fName" type="text" placeholder="First Name" required />
+                  </fieldset>
+                </div>
+                <div class="fieldsetS">
+                  <fieldset>
+                    <legend>Last Name</legend>
+                    <label for="lName">Last Name:</label>
+                    <input id="lName" name="lName" type="text" placeholder="Last Name" />
+                  </fieldset>
+                </div>
+                <div class="fieldsetS">
+                  <fieldset>
+                    <legend>Email Address</legend>
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="email" placeholder="example@email.com" required />
+                  </fieldset>
+                </div>
+                <div class="fieldsetS">
+                  <fieldset>
+                    <legend>Phone Number</legend>
+                    <label for="phone">Phone Number:</label>
+                    <input id="phone" name="phone" type="tel" placeholder="000-000-0000" />
+                  </fieldset>
+                </div>
+              </fieldset>
+            </div>
+            <div class="fieldsetB">
+              <fieldset>
+                <legend class="vis">Ticket Type</legend>
+                <div class="fieldsetS">
+                  <fieldset>
+                    <legend>Ultra Awesome Ticket</legend>
+                    <label for="Uawesome">Ultra Awesome Ticket</label>
+                    <input type="radio" id="Uawesome" name="tType" value="Uawesome" />
+                  </fieldset>
+                </div>
+                <div class="fieldsetS">
+                  <fieldset>
+                    <legend>Super Awesome Ticket</legend>
+                    <label for="Sawesome">Super Awesome Ticket</label>
+                    <input type="radio" id="Sawesome" name="tType" value="Sawesome" />
+                  </fieldset>
+                </div>
+                <div class="fieldsetS">
+                  <fieldset>
+                    <legend>Awesome Ticket</legend>
+                    <label for="awesome">Awesome Ticket</label>
+                    <input type="radio" id="awesome" name="tType" value="awesome" />
+                  </fieldset>
+                </div>
+              </fieldset>
+            </div>
+            <div class="fieldsetB">
+              <fieldset>
+                <legend class="vis">Payment</legend>
+                <div class="fieldsetS">
+                  <fieldset>
+                    <legend>Credit Card Type</legend>
+                    <label for="ccType">Credit Card Type:</label>
+                    <select id="ccType" name="ccType">
+                      <option value="visa">Visa</option>
+                      <option value="mastercard">Mastercard</option>
+                      <option value="americanE">American Express</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="fieldsetS">
+                  <fieldset>
+                    <legend>Credit Card Number</legend>
+                    <label for="ccNum">Credit Card Number:</label>
+                    <input id="ccNum" name="ccNum" type="text" placeholder="0000-0000-0000-0000" required />
+                  </fieldset>
+                </div>
+              </fieldset>
+            </div>
+            <div class="fieldsetB">
+              <fieldset>
+                <legend>Submit</legend>
+                <button type="submit">Let's Get Awesome!</button>
+              </fieldset>
+            </div>
+          </form>
+        </section>
+      </main>
+      <footer>
+        <p>Copyright AwesomeFest 2020 &copy;. All Rights Reserved.</p>
+      </footer>
+    </div>
+    <!--end wrapper-->
+  </body>
+</html>
